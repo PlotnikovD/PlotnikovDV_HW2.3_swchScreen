@@ -14,11 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     var alertMessageName = "Your name is User 😉"
-    var alertMessagePassword = "Your password is Password 😎"
+    var alertMessagePassword = "Your password is 1234 😎"
  
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        if loginTF.text == "User" && passwordTF.text == "1234" {
             performSegue(withIdentifier: "deteilSegue", sender: nil)
+        } else {
+            showMainAlert()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,6 +38,15 @@ class ViewController: UIViewController {
     @IBAction func showAlertButtonTapped(message: String) {
 
             let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: UIAlertController.Style.alert)
+
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            self.present(alert, animated: true, completion: nil)
+        }
+    
+    @IBAction func showMainAlert() {
+
+        let alert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: UIAlertController.Style.alert)
 
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
