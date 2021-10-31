@@ -14,6 +14,8 @@
 		2821AF6227298AB9009D15A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2821AF6127298AB9009D15A5 /* Assets.xcassets */; };
 		2821AF6527298AB9009D15A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2821AF6327298AB9009D15A5 /* LaunchScreen.storyboard */; };
 		2821AF6D27298EDC009D15A5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2821AF6C27298EDC009D15A5 /* WelcomeViewController.swift */; };
+		2821AF93272EC969009D15A5 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2821AF92272EC969009D15A5 /* InformationViewController.swift */; };
+		2821AF95272EC9BD009D15A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2821AF94272EC9BD009D15A5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2821AF6427298AB9009D15A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2821AF6627298AB9009D15A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2821AF6C27298EDC009D15A5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2821AF92272EC969009D15A5 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		2821AF94272EC9BD009D15A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				2821AF5A27298AB8009D15A5 /* SceneDelegate.swift */,
 				2821AF5C27298AB8009D15A5 /* ViewController.swift */,
 				2821AF5E27298AB8009D15A5 /* Main.storyboard */,
+				2821AF94272EC9BD009D15A5 /* SettingsViewController.swift */,
+				2821AF92272EC969009D15A5 /* InformationViewController.swift */,
 				2821AF6C27298EDC009D15A5 /* WelcomeViewController.swift */,
 				2821AF6127298AB9009D15A5 /* Assets.xcassets */,
 				2821AF6327298AB9009D15A5 /* LaunchScreen.storyboard */,
@@ -145,6 +151,8 @@
 				2821AF6D27298EDC009D15A5 /* WelcomeViewController.swift in Sources */,
 				2821AF5927298AB8009D15A5 /* AppDelegate.swift in Sources */,
 				2821AF5B27298AB8009D15A5 /* SceneDelegate.swift in Sources */,
+				2821AF93272EC969009D15A5 /* InformationViewController.swift in Sources */,
+				2821AF95272EC9BD009D15A5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

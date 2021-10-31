@@ -24,4 +24,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func goBackTapped(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
+    
 }
+

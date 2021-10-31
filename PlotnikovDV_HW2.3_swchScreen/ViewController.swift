@@ -61,7 +61,5 @@ class ViewController: UIViewController {
         showAlertButtonTapped(message: alertMessagePassword)
     }
     
-
-
 }
 
