@@ -19,12 +19,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var setHobbiesTF: UITextField!
     
     
-    
     @IBAction func saveChangesButton(_ sender: UIButton) {
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 guard let changeVC = segue.destination as? InfoViewController else { return }
             changeVC.name = setNameTF.text
         }
-    
     }
 }
