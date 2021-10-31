@@ -61,5 +61,10 @@ class ViewController: UIViewController {
         showAlertButtonTapped(message: alertMessagePassword)
     }
     
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        loginTF.text = ""
+        passwordTF.text = ""
+    }
+    
 }
 

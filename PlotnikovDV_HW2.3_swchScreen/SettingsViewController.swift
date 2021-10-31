@@ -9,15 +9,22 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var changeNameTF: UITextField!
-    @IBOutlet weak var changeYearTF: UITextField!
-    @IBOutlet weak var changePhoneNumberTF: UITextField!
-    @IBOutlet weak var changeHobbies: UITextField!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+    @IBOutlet weak var setNameTF: UITextField!
+    
+    @IBOutlet weak var setYearsTF: UITextField!
+    
+    @IBOutlet weak var setPhoneTF: UITextField!
+    
+    @IBOutlet weak var setHobbiesTF: UITextField!
+    
+    
+    
+    @IBAction func saveChangesButton(_ sender: UIButton) {
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                guard let changeVC = segue.destination as? InfoViewController else { return }
+            changeVC.name = setNameTF.text
+        }
+    
     }
-
 }

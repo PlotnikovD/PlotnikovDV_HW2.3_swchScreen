@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
         
         guard let login = self.login else { return }
         label.text = "Hello \(login)"
+            
     }
     
 
@@ -27,4 +28,5 @@ class WelcomeViewController: UIViewController {
     
     
 }
+
 

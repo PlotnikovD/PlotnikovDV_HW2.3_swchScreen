@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1217" y="54"/>
         </scene>
-        <!--Information View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="qdB-vQ-6Kl">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Uo0-8q-uqC" customClass="InformationViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Uo0-8q-uqC" customClass="InfoViewController" customModule="PlotnikovDV_HW2_3_swchScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zp8-Yg-1wC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,26 +261,25 @@
                     <navigationItem key="navigationItem" id="dM1-1Y-q8o">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="bRC-1O-nMg">
                             <connections>
-                                <segue destination="vWw-dl-zNe" kind="show" id="HI2-Gr-WSi"/>
+                                <segue destination="vWw-dl-zNe" kind="show" identifier="settings" id="HI2-Gr-WSi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userAge" destination="Mxu-O0-uxF" id="gMv-XE-pq1"/>
-                        <outlet property="userHobbies" destination="Ffd-0F-0PX" id="jIG-kB-41n"/>
-                        <outlet property="userImage" destination="33w-Ck-oHt" id="k43-Is-RQf"/>
-                        <outlet property="userName" destination="N0I-Pi-F9D" id="u7S-ea-hMw"/>
-                        <outlet property="userPhoneNumber" destination="aYP-va-3Gh" id="XGe-lK-lse"/>
+                        <outlet property="ageLabel" destination="Mxu-O0-uxF" id="uNt-f2-vUP"/>
+                        <outlet property="hobbyLabel" destination="Ffd-0F-0PX" id="XJU-7Y-hZ1"/>
+                        <outlet property="nameLable" destination="N0I-Pi-F9D" id="zS9-wd-Qy5"/>
+                        <outlet property="phoneNumberLabel" destination="aYP-va-3Gh" id="jOa-kt-bqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfN-n1-EYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="780"/>
+            <point key="canvasLocation" x="243" y="779"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="XaX-Yp-0qu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vWw-dl-zNe" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vWw-dl-zNe" customClass="SettingsViewController" customModule="PlotnikovDV_HW2_3_swchScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4Y-Fl-R4p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,10 +342,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-pb-Wo5">
-                                <rect key="frame" x="139" y="608" width="136" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-pb-Wo5">
+                                <rect key="frame" x="139" y="606" width="136" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hng-gN-raf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save changes"/>
+                                <connections>
+                                    <action selector="saveChangesButton:" destination="vWw-dl-zNe" eventType="touchUpInside" id="980-IR-MXW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XJi-1g-868"/>
@@ -355,16 +360,17 @@
                             <constraint firstItem="XJi-1g-868" firstAttribute="trailing" secondItem="dql-pb-Wo5" secondAttribute="trailing" constant="139" id="9NX-DW-bVn"/>
                             <constraint firstItem="dql-pb-Wo5" firstAttribute="centerX" secondItem="XJi-1g-868" secondAttribute="centerX" id="HqW-xv-WxR"/>
                             <constraint firstItem="dql-pb-Wo5" firstAttribute="leading" secondItem="XJi-1g-868" secondAttribute="leading" constant="139" id="OC0-th-rQZ"/>
+                            <constraint firstItem="XJi-1g-868" firstAttribute="bottom" secondItem="dql-pb-Wo5" secondAttribute="bottom" constant="157" id="UQF-94-2Sv"/>
                             <constraint firstItem="rEW-cH-ocs" firstAttribute="leading" secondItem="XJi-1g-868" secondAttribute="leading" constant="20" id="YYj-jf-eT9"/>
                             <constraint firstItem="rEW-cH-ocs" firstAttribute="top" secondItem="XJi-1g-868" secondAttribute="top" constant="40" id="csU-cN-dWn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IYa-o7-NqS"/>
                     <connections>
-                        <outlet property="changeHobbies" destination="Fnv-YY-wPT" id="rYy-5g-eBC"/>
-                        <outlet property="changeNameTF" destination="Zst-Ud-WiF" id="ls9-Tu-ATd"/>
-                        <outlet property="changePhoneNumberTF" destination="wy8-V7-c7U" id="EKj-Ml-3Es"/>
-                        <outlet property="changeYearTF" destination="Obd-9i-IYP" id="CBV-Cc-NXh"/>
+                        <outlet property="setHobbiesTF" destination="Fnv-YY-wPT" id="tlc-Ur-4Sw"/>
+                        <outlet property="setNameTF" destination="Zst-Ud-WiF" id="FJV-zr-V1g"/>
+                        <outlet property="setPhoneTF" destination="wy8-V7-c7U" id="zsm-zG-DPA"/>
+                        <outlet property="setYearsTF" destination="Obd-9i-IYP" id="Xhp-6c-rvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3P-ya-3LB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
